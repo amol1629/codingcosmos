@@ -1,0 +1,37 @@
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+
+        {{#each slides}}
+
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{@index}}"
+            class="{{this.class}}" aria-current="true" aria-label="Slide 1">
+        </button>
+
+        {{/each}}
+
+    </div>
+    <div class="carousel-inner">
+
+        {{#each slides}}
+        <div class="carousel-item {{this.class}}">
+            <img src="{{this.sliderUrl}}" class="d-lg-block w-100 object-fit-cover" style="max-height: 600px;" alt="JavaScript Image">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-warning">{{this.title}}</h1>
+                <p>{{this.info}}</p>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>

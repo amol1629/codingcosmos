@@ -1,0 +1,28 @@
+{{!-- Service Section Starts : --}}
+    <div class="container-fluid py-3 px-5 services-section ">
+        <h1 class="text-center text-white my-5">Our Services</h1>
+
+        <div class="row my-5">
+            {{#each services}}
+            <div class="col-md-4 my-3">
+                <div class=" card services-details h-100 services-card-bg">
+                    <img src="{{this.serviceImage}}" class="card-img-top object-fit-cover py-3 my-3 card-images "
+                        alt="Java Logo">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="card-title text-success">{{this.serviceTitle}}</h4>
+
+                        <p class="card-text">{{this.serviceInfo}}</p>
+
+                        <a href="{{this.serviceBtnFirstUrl}}"
+                            class="card-link text-success">{{this.serviceBtnFirstText}}</a>
+
+                        <a href="{{this.serviceBtnSecondUrl}}" class="card-link">{{this.serviceBtnSecondText}}</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>

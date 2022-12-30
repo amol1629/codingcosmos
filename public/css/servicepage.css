@@ -1,0 +1,41 @@
+.services-page-bg {
+    background-image: url("/static/images/bg-6.jpg");
+}
+
+
+
+.services-section {
+    /* background-image: url("/static/images/bg-6.jpg"); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    margin-bottom: 10px;
+    border-bottom: 2px solid grey;
+}
+
+.services-details {
+    border-radius: 30px;
+    border: 1px solid gray;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+.services-details:hover {
+    border: 1px solid aqua;
+    transition: all 0.5 ease;
+    color: #0dcaf0;
+}
+
+.services-card-bg {
+    background: none;
+    color: white;
+}
+
+.card-images {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    /* padding-top: 10px; */
+}

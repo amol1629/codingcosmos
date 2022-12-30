@@ -1,0 +1,85 @@
+body {
+    background-image: url("/static/images/do_what_is_great.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.first-banner {
+    border-bottom: 2px solid grey;
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.first-banner:hover {
+    color: aqua;
+    transition: all 0.5s ease;
+
+
+}
+
+.services-section {
+    /* background-image: url("/static/images/bg-6.jpg"); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    margin-bottom: 10px;
+    border-bottom: 2px solid grey;
+}
+
+.services-details {
+    border-radius: 30px;
+    border: 1px solid gray;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+.services-details:hover {
+    border: 1px solid aqua;
+    transition: all 0.5 ease;
+    color: #0dcaf0;
+}
+
+.services-card-bg {
+    background: none;
+    color: white;
+}
+
+.card-images {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    /* padding-top: 10px; */
+}
+
+.contact-us-section {
+    color: white;
+    border-bottom: 2px solid grey;
+}
+
+.contact-us-section .mb-3 {
+    margin: 30px 0;
+}
+
+.contact-us-section input {
+    margin: 10px 0;
+    border: 2px solid rgb(248, 248, 25);
+    background-color: rgb(199, 197, 197);
+
+}
+
+.contact-us-section .text-area {
+    border: 2px solid rgb(248, 248, 25);
+    background-color: rgb(199, 197, 197);
+
+}
+
+.contact-us-section .text-area:focus {
+    background-color: white;
+
+}
