@@ -6,10 +6,12 @@ const routes = require('./routes/main');
 const hbs = require('hbs');
 const Detail = require('./models/Detail');
 const Slider = require('./models/Slider');
+const Banner1 = require('./models/Banner1');
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 const Service = require('./models/Service');
+const CoursePrice = require('./models/CoursePrice');
 const app = express();
 
 
@@ -51,7 +53,7 @@ mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
     //  Data is inserted to MongoDB database :
     // Detail.create({
     //     brandName: "Amol",
-    //     brandIconUrl: "amol.chdf",
+    //     brandIconUrl: "/static/images/logo.jpg",
     //     links: [
     //         {
     //             label: "Home",
@@ -114,6 +116,16 @@ mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
 
     //     ]
     // )
+
+
+    // For Banner1
+    // Banner1.create({
+    //     banner1Image: 'static/images/logo.jpg',
+    //     banner1Title: 'Amol Rathod',
+    //     banner1Info1: 'Coding Cosmos is website where you can get all programming courses at affordable price and boost your career in various technologies. Our mission is "Educating people of every workplace"',
+    //     banner1VisionLine: '"Be educated so that you can change the world."',
+    //     banner1Info2: 'We have designed all the courses in such a way that it will be an enjoyable experience of learning to everyone.'
+    // })
 
 
     // For Services:
@@ -182,6 +194,41 @@ mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
 
     //     ]
     // )
+
+
+    // Course Name and Price :
+    // CoursePrice.create([
+    //     {
+    //         courseName: "Java",
+    //         coursePrice: "1"
+    //     },
+
+    //     {
+    //         courseName: "Python",
+    //         coursePrice: "2"
+    //     },
+
+    //     {
+    //         courseName: "C++",
+    //         coursePrice: "3"
+    //     },
+
+    //     {
+    //         courseName: "Angular",
+    //         coursePrice: "4"
+    //     },
+
+    //     {
+    //         courseName: "C",
+    //         coursePrice: "5"
+    //     },
+
+    //     {
+    //         courseName: "JavaScript",
+    //         coursePrice: "6"
+    //     }
+
+    // ])
 
 });
 

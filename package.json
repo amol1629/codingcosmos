@@ -12,6 +12,7 @@
   "dependencies": {
     "alert": "^5.1.4",
     "body-parser": "^1.20.1",
+    "bootstrap-icons": "^1.10.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",

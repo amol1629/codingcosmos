@@ -1,7 +1,8 @@
 body {
-    background-image: url("/static/images/do_what_is_great.jpg");
+    background-image: url("/static/images/bg-3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -19,6 +20,15 @@ body {
     transition: all 0.5s ease;
 
 
+}
+
+.second-section {
+    border-bottom: 2px solid grey;
+
+}
+
+.section-block-border {
+    border-bottom: 1px solid wheat;
 }
 
 .services-section {
@@ -48,6 +58,45 @@ body {
 .services-card-bg {
     background: none;
     color: white;
+}
+
+.java-course,
+.python-course,
+.cpp-course,
+.angular-course,
+.c-course,
+.js-course,
+.about-us-bg {
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.java-course:hover {
+    color: #FA8072;
+}
+
+.python-course:hover {
+    color: #DDA0DD;
+}
+
+.cpp-course:hover {
+    color: Aquamarine;
+}
+
+.angular-course:hover {
+    color: lime;
+
+}
+
+.c-course:hover {
+    color: #7B68EE;
+}
+
+.js-course:hover {
+    color: violet;
 }
 
 .card-images {
@@ -82,4 +131,16 @@ body {
 .contact-us-section .text-area:focus {
     background-color: white;
 
+}
+
+
+.about-us-bg {
+    background-image: url("/static/images/bg-17.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* color: white; */
+}
+
+.about-us-bg:hover {
+    color: rgb(223, 68, 151);
 }

@@ -5,8 +5,10 @@ const Detail = require("../models/Detail");
 const Slider = require('../models/Slider');
 const Service = require('../models/Service');
 const Contact = require('../models/ContactUs');
+const Banner1 = require('../models/Banner1');
 const routes = express.Router();
 const notifier = require('node-notifier');
+const CoursePrice = require('../models/CoursePrice');
 
 routes.get("/", async (request, response) => {
 
@@ -16,11 +18,16 @@ routes.get("/", async (request, response) => {
 
     const services = await Service.find();
 
+    const banner1 = await Banner1.findOne();
+
+    const courseprice = await CoursePrice.find();
 
     response.render("index", {
         details: details,
         slides: slides,
-        services: services
+        services: services,
+        banner1: banner1,
+        courseprice: courseprice
     });
 });
 
@@ -29,9 +36,14 @@ routes.get("/services", async (request, response) => {
 
     const services = await Service.find();
 
+    const courseprice = await CoursePrice.find();
+
+
     response.render("services", {
         details: details,
-        services: services
+        services: services,
+        courseprice: courseprice
+
     });
 });
 
