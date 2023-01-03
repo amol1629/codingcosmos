@@ -12,4 +12,4 @@ const detail = new mongoose.Schema({
     ]
 });
 
-module.exports = mongoose.model("details", detail);
+module.exports = mongoose.model("DETAILS", detail);

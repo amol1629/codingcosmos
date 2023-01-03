@@ -7,20 +7,20 @@ const Service = require('../models/Service');
 const Contact = require('../models/ContactUs');
 const Banner1 = require('../models/Banner1');
 const routes = express.Router();
-const notifier = require('node-notifier');
 const CoursePrice = require('../models/CoursePrice');
 
 routes.get("/", async (request, response) => {
 
-    const details = await Detail.findOne({ "_id": "63ad7656231d295862108e2a" });
+    const details = await Detail.findOne({ "_id": "63b45f1c59a7e285eb2d5172" });
 
     const slides = await Slider.find();
+
 
     const services = await Service.find();
 
     const banner1 = await Banner1.findOne();
 
-    const courseprice = await CoursePrice.find();
+    const courseprice = await CoursePrice.findOne();
 
     response.render("index", {
         details: details,
@@ -32,11 +32,11 @@ routes.get("/", async (request, response) => {
 });
 
 routes.get("/services", async (request, response) => {
-    const details = await Detail.findOne({ "_id": "63ad7656231d295862108e2a" });
+    const details = await Detail.findOne({ "_id": "63b45f1c59a7e285eb2d5172" });
 
     const services = await Service.find();
 
-    const courseprice = await CoursePrice.find();
+    const courseprice = await CoursePrice.findOne();
 
 
     response.render("services", {
@@ -48,19 +48,19 @@ routes.get("/services", async (request, response) => {
 });
 
 
-routes.get("/about", async (request, response) => {
-    const details = await Detail.findOne({ "_id": "63ad7656231d295862108e2a" });
+routes.get("/contact", async (request, response) => {
+    const details = await Detail.findOne({ "_id": "63b45f1c59a7e285eb2d5172" });
 
-    response.render("about", {
+    response.render("contact", {
         details: details
     });
 });
 
 
-routes.get("/contact", async (request, response) => {
-    const details = await Detail.findOne({ "_id": "63ad7656231d295862108e2a" });
+routes.get("/about", async (request, response) => {
+    const details = await Detail.findOne({ "_id": "63b45f1c59a7e285eb2d5172" });
 
-    response.render("contact", {
+    response.render("about", {
         details: details
     });
 })

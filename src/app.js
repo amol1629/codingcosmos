@@ -42,7 +42,7 @@ hbs.registerPartials("views/partials");
 
 
 // Database {MongoDB} connection :
-mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
+mongoose.connect("mongodb+srv://amol1629:Stark1629@cluster0.uroieye.mongodb.net/codingcosmos?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     family: 4,
@@ -52,25 +52,29 @@ mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
 
     //  Data is inserted to MongoDB database :
     // Detail.create({
-    //     brandName: "Amol",
+    //     brandName: "King Maker",
     //     brandIconUrl: "/static/images/logo.jpg",
     //     links: [
     //         {
     //             label: "Home",
     //             url: "/"
     //         },
+
     //         {
     //             label: "Services",
     //             url: "/services"
     //         },
-    //         {
-    //             label: "About Us",
-    //             url: "/about"
-    //         },
+
     //         {
     //             label: "Contact Us",
+    //             url: "/about"
+    //         },
+
+    //         {
+    //             label: "About Us",
     //             url: "/contact"
     //         }
+
     //     ]
     // });
 
@@ -116,6 +120,47 @@ mongoose.connect("mongodb://localhost:27017/CodingCosmos", {
 
     //     ]
     // )
+
+
+    // Slider.create([
+    //     {
+    //         title: "JavaScript",
+    //         info: "JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web. JavaScript is easy to learn.",
+    //         sliderUrl: "/static/images/slider_js_1.jpg"
+    //     },
+
+    //     {
+    //         title: "Java",
+    //         info: "Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.",
+    //         sliderUrl: "/static/images/slider_java_2.webp"
+    //     },
+
+    //     {
+    //         title: "Python",
+    //         info: "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+    //         sliderUrl: "/static/images/slider_python_3.jpg"
+    //     },
+
+    //     {
+    //         title: "C Language",
+    //         info: "C is considered as a middle-level language because it supports the feature of both low-level and high-level languages.",
+    //         sliderUrl: "/static/images/slider_c_4.jpg"
+    //     },
+
+    //     {
+    //         title: "C++ Language",
+    //         info: "C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on.",
+    //         sliderUrl: "/static/images/slider_cpp_5.jpg"
+    //     },
+
+    //     {
+    //         title: "Angular JS",
+    //         info: "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries.",
+    //         sliderUrl: "/static/images/slider_angular_6.png"
+    //     }
+
+
+    // ])
 
 
     // For Banner1

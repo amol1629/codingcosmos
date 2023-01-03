@@ -66,7 +66,13 @@ body {
 .angular-course,
 .c-course,
 .js-course,
-.about-us-bg {
+.about-us-bg,
+.au-card-success,
+.au-card-practical,
+.au-card-expert,
+.au-card-qa,
+.au-card-doubt,
+.au-card-personality {
     color: white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -133,6 +139,54 @@ body {
 
 }
 
+
+
+.about-us-page {
+    background-image: url("/static/images/bg-2.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-us-section {
+    border-bottom: 5px solid grey;
+}
+
+.about-us-section h1 {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+
+.au-card-success:hover {
+    color: cyan;
+}
+
+.au-card-practical:hover {
+    color: #e1bdba;
+}
+
+.au-card-expert:hover {
+    color: lime;
+}
+
+.au-card-qa:hover {
+    color: rgb(255, 247, 0);
+}
+
+.au-card-doubt:hover {
+    color: #b296ff;
+}
+
+.au-card-personality:hover {
+    color: aqua;
+}
+
+
+.about-us-offers h2 {
+    /* font-size: 40px; */
+    font-weight: bolder;
+    font-style: italic;
+}
 
 .about-us-bg {
     background-image: url("/static/images/bg-17.jpg");
