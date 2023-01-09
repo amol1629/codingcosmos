@@ -8,7 +8,7 @@ const Detail = require('./models/Detail');
 const Slider = require('./models/Slider');
 const Banner1 = require('./models/Banner1');
 const bodyParser = require('body-parser');
-
+const signup = require('./models/Signup')
 const mongoose = require('mongoose');
 const Service = require('./models/Service');
 const CoursePrice = require('./models/CoursePrice');
@@ -66,14 +66,21 @@ mongoose.connect("mongodb+srv://amol1629:Stark1629@cluster0.uroieye.mongodb.net/
     //         },
 
     //         {
-    //             label: "Contact Us",
+    //             label: "About Us",
     //             url: "/about"
     //         },
 
     //         {
-    //             label: "About Us",
+    //             label: "Contact Us",
     //             url: "/contact"
+    //         },
+
+    //         {
+    //             label: 'Signup',
+    //             url: '/signup'
     //         }
+
+
 
     //     ]
     // });

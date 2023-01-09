@@ -126,6 +126,37 @@
         </section>
 
 
+
+
+
+
+
+
+        {{!-- Signin Part --}}
+
+        <div class="container my-5">
+            <div class="my-5 text-white align-self-center w-100 align-self-center">
+                <div class="row justify-content-center">
+                    <div class="col-6 ">
+                        <form action="/signin" method="post">
+                            <div class="form-group my-3">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Enter password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         {{> aboutus}}
     </div>
 

@@ -6,7 +6,7 @@ body {
 }
 
 
-.contact-us-section .submit-button {
+.submit-button {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan;
 
@@ -17,7 +17,7 @@ body {
     color: white;
 }
 
-.contact-us-section .submit-button:hover {
+.submit-button:hover {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan,
         0 0 50px cyan,
