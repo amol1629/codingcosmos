@@ -1,8 +1,49 @@
 body {
-    background-image: url("/static/images/bg-3.jpg");
+    background-image: url("/static/images/bg-20.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+}
+
+/* Navigation link Style */
+.nav-bar-link {
+    box-shadow: 0 0 5px rgb(221, 144, 218),
+        0 0 5px rgb(221, 144, 218);
+
+    background: none;
+    border: 2px solid deeppink;
+    border-radius: 35px;
+
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.nav-bar-link:hover {
+    box-shadow: 0 0 5px rgb(149, 181, 5),
+        0 0 25px pink,
+        0 0 50px pink,
+        0 0 100px pink,
+        0 0 200px pink;
+
+    background-color: red;
+
+
+}
+
+
+
+
+/* Sign up page */
+.singup-page-footer {
+    color: white;
+}
+
+.singup-page-footer:hover {
+    color: rgb(249, 195, 224);
 }
 
 
@@ -93,7 +134,8 @@ body {
 .au-card-expert,
 .au-card-qa,
 .au-card-doubt,
-.au-card-personality {
+.au-card-personality,
+.singup-page-footer {
     color: white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;

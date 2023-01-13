@@ -12,6 +12,7 @@ const signup = require('./models/Signup')
 const mongoose = require('mongoose');
 const Service = require('./models/Service');
 const CoursePrice = require('./models/CoursePrice');
+const SignInUp = require('./models/SignInUp');
 const app = express();
 
 
@@ -48,42 +49,65 @@ mongoose.connect("mongodb+srv://amol1629:Stark1629@cluster0.uroieye.mongodb.net/
     family: 4,
 }, () => {
 
-    console.log("MongoDB Database is now connected to your application.");
+    console.log("MongoDB Database is now connected to your application.\n");
 
     //  Data is inserted to MongoDB database :
-    // Detail.create({
-    //     brandName: "King Maker",
-    //     brandIconUrl: "/static/images/logo.jpg",
-    //     links: [
+    /* Detail.create({
+        brandName: "King Maker",
+        brandIconUrl: "/static/images/logo.jpg",
+        links: [
+            {
+                label: "Home",
+                url: "/"
+            },
+
+            {
+                label: "Services",
+                url: "/services"
+            },
+
+            {
+                label: "About Us",
+                url: "/about"
+            },
+
+            {
+                label: "Contact Us",
+                url: "/contact"
+            },
+
+
+            {
+                label: "Profile",
+                url: "/profile"
+            },
+            {
+                label: 'Signout',
+                url: '/signout'
+            }
+        ]
+    }); */
+
+
+    // SignInUp Page : 
+    // SignInUp.create({
+    //     flinks: [
     //         {
-    //             label: "Home",
-    //             url: "/"
+    //             label: 'SignUp',
+    //             url: '/'
     //         },
 
     //         {
-    //             label: "Services",
-    //             url: "/services"
+    //             label: 'SignIn',
+    //             url: '/signin'
     //         },
 
     //         {
-    //             label: "About Us",
-    //             url: "/about"
-    //         },
-
-    //         {
-    //             label: "Contact Us",
-    //             url: "/contact"
-    //         },
-
-    //         {
-    //             label: 'Signup',
-    //             url: '/signup'
+    //             label: 'About Us',
+    //             url: '/faboutus'
     //         }
-
-
-
     //     ]
-    // });
+    // })
 
 
     // For Slider
@@ -284,6 +308,6 @@ mongoose.connect("mongodb+srv://amol1629:Stark1629@cluster0.uroieye.mongodb.net/
 
 });
 
-app.listen(process.env.PORT | 3030, () => {
-    console.log("Server has been started on port 3030...");
+app.listen(process.env.PORT | 4040, () => {
+    console.log("\nServer has been started on port '4040'...\n");
 })

@@ -18,8 +18,6 @@
             background-attachment: fixed;
         }
 
-
-
         h2 {
             color: white;
             text-shadow: 0 0 5px deeppink,
@@ -46,19 +44,27 @@
         }
     </style>
 
-    <title>Signup Page</title>
+    <title>Sign In Page</title>
 </head>
 
 <body>
 
+    {{!-- {{> navbar data=details}} --}}
+
+    {{!-- Navigation bar --}}
 
     {{> signinupNav sign=signinup}}
 
 
-    {{!-- Sign Up form --}}
+
+    {{!-- Sign in form --}}
     <section class="about-us-section py-5 my-5 ">
         <div class="container">
             <div class="row">
+
+                <div class="col-md-6 align-self-center text-center">
+                    <h1 class="text-white">Climb Your Way To Success With CODING COSMOS</h1>
+                </div>
 
                 <div class="col-md-6 align-self-center">
                     <div class="container-fluid my-5 ">
@@ -66,34 +72,23 @@
                             <div class="row justify-content-center">
                                 <div class="col ">
 
-                                    <h2 class="text-center">Sign Up Here</h2>
-                                    <form action="/logup" method="post">
-                                        <div class="form-group my-4">
-                                            <label for="name">Name</label>
-                                            <input type="text" class="form-control py-2 mt-2" id="name" name="name"
-                                                placeholder="Enter your name">
-                                        </div>
-
-                                        <div class="form-group my-4">
-                                            <label for="name">Phone Number</label>
-                                            <input type="number" class="form-control py-2 mt-2" id="phoneNumber"
-                                                name="phoneNumber" placeholder="Enter your phone number">
-                                        </div>
-
+                                    <h2 class="text-center">Sign In Here</h2>
+                                    <form action="/signin" method="post">
                                         <div class="form-group my-4">
                                             <label for="email">Email address</label>
                                             <input type="email" class="form-control py-2 mt-2" id="email" name="email"
-                                                placeholder="Enter your email">
+                                                placeholder="Enter email">
                                         </div>
                                         <div class="form-group my-4">
                                             <label for="password">Password</label>
                                             <input type="password" class="form-control py-2 mt-2" id="password"
-                                                name="password" placeholder="Enter your password">
+                                                name="password" placeholder="Enter password">
                                         </div>
 
                                         <div class="text-center py-3">
-                                            <button type="submit"
-                                                class="btn text-white text-center submit-button px-5">Register</button>
+                                            <button type="submit" id="checkout-button"
+                                                class="btn text-white text-center submit-button px-5">Log
+                                                In</button>
                                         </div>
                                     </form>
                                 </div>
@@ -102,9 +97,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 align-self-center text-center">
-                    <h1 class="text-white">Creative Learning Is The Key To Bright Future.</h1>
-                </div>
+
             </div>
         </div>
     </section>
@@ -112,12 +105,11 @@
 
 
     {{!-- Information Section --}}
-
     <section class="about-us-section py-5 my-5 text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 align-self-center">
-                    <h1 class="text-white">Creative </h1>
+                    <h1 class="text-white">We Are Here To Make Your Journey Evident.</h1>
                 </div>
 
                 <div class="col-md-6 align-self-center">
@@ -131,10 +123,8 @@
 
 
 
-    {{!-- Footer --}}
-
-    <footer class=" py-3 mt-5 footer">
-        <div class="container singup-page-footer">
+    <footer class=" py-3 mt-5 footer singup-page-footer">
+        <div class="container ">
             <div class="row ">
                 <div class="col-12 col-md-4 text-center">
                     <h5 class="text-info">Contact Us</h5>
