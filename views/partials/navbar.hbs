@@ -4,12 +4,12 @@
     background-size: cover;
   }
 
-  .custom-toggler.navbar-toggler {
-    border-color: rgb(255, 102, 203) !important;
+  .navigation button {
+    border: 2px solid cyan;
   }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light py-3 navigation fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark py-3 navigation fixed-top">
   <div class="container-fluid  px-5 text-white">
 
     <a class="navbar-brand" href="/home">
@@ -20,7 +20,7 @@
       <span class="ps-2 text-white">{{data.brandName}}</span>
     </a>
 
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+    <button class="navbar-toggler btn-white" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,3 +44,14 @@
     </div>
   </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+{{!-- "dev": "nodemon src/app.js -e js,hbs" --}}
