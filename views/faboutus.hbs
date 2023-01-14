@@ -20,7 +20,7 @@
 
 
 
-        h2 {
+        h1 {
             color: white;
             text-shadow: 0 0 5px deeppink,
                 0 0 25px deeppink,
@@ -28,7 +28,9 @@
                 0 0 100px deeppink,
                 0 0 200px deeppink;
 
-            font-weight: bold;
+            font-weight: bolder;
+
+            font-size: 50px;
 
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
@@ -37,12 +39,9 @@
 
         }
 
-        h2:hover {
-            text-shadow: 0 0 5px pink,
-                0 0 25px pink,
-                0 0 50px pink,
-                0 0 100px pink,
-                0 0 200px pink;
+        .section-border-bottom {
+            border-bottom: 2px solid cyan;
+
         }
     </style>
 
@@ -56,51 +55,117 @@
 
 
 
-    <section class="about-us-offers">
-        <div class="container-fluid container-fluid py-3 px-5 border border-bottom-5">
-            <div class="row my-5">
+    <section class="about-us-offers section-border-bottom">
+        <div class="container-fluid container-fluid py-3 px-5 ">
+            <div class="row my-5 border-bottom-2">
 
                 <div class="w-75 align-self-center m-auto">
-                    <h2 class="text-center text-info fs-1 pb-5">What CodingCosmos Can Offer You</h2>
+                    <h1 class="text-center text-white  pb-5">Why Coding Cosmos is developed ?</h1>
 
                     <p class="text-center text-white fs-5 pb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem earum unde vero fugit
-                        voluptatum nihil sapiente voluptates eos sit est aperiam enim in magni, ullam tempora iusto
-                        incidunt
-                        eveniet.
+                        The main purpose of developing <span class="text-warning fw-bolder">"Coding Cosmos"</span> is to
+                        provide all
+                        neccessary knowledge of programming to every individual with an affordable price and we make all
+                        our courses very interesting. We hope you will like our approach..
                     </p>
                 </div>
-
-                <h2 class="text-center text-info fs-1 pb-5 my-5 ">What CodingCosmos Can Offer You</h2>
-
-
-                <div class="col-md-6 my-3 text-center py-4 au-card-success">
-                    <img src="/static/images/about-us-card-1.png" class="card-img-top img-fluid h-50 w-25" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title pb-4">Roadmap to Success</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 my-3 text-center py-4 au-card-practical">
-                    <img src="/static/images/about-us-card-2.png" class="card-img-top img-fluid h-50 w-25" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title pb-4">Practical Knowledge</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.
-                        </p>
-                    </div>
-                </div>
             </div>
-
         </div>
     </section>
 
 
+
+
+    {{!-- Team Information --}}
+
+    <section class="about-us-offers section-border-bottom">
+        <div class="container-fluid container-fluid py-3 px-5">
+            <div class="row my-5">
+
+                <h1 class="text-center text-white  pb-5">Our Team</h1>
+
+
+                <div class="col-md-6 my-3 text-center py-4 au-card-success">
+                    <img src="/static/images/faboutus-male.png" class="card-img-top img-fluid h-50 w-25" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title pb-4">Amol Rathod</h5>
+
+                        <p class="card-text pb-3">Full Stack Developer</p>
+
+                        <a href="https://github.com/amol1629" target="_blank"><img src="/static/images/icon_github.svg"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Github" alt="">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/amol-rathod-44b4aa230" target="_blank"><img
+                                src="/static/images/icon_linkedin.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="LinkedIn" alt="">
+                        </a>
+
+                        <a href="https://t.me/amolrathod1629" target="_blank"><img
+                                src="/static/images/icon_telegram.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Telegram" alt="">
+                        </a>
+
+                        <a href="https://wa.me/919657383030" target="_blank"><img src="/static/images/icon_whatsapp.svg"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCg2wirjt_6NTxUUTUiiCYkQ" target="_blank"><img
+                                src="/static/images/icon_youtube.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Youtube" alt="">
+                        </a>
+
+                        <a href="mailto:mail@amol1629rathod@gmail.com" target="_blank"><img
+                                src="/static/images/icon_gmail.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Gmail" alt="">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 my-3 text-center py-4 au-card-success">
+                    <img src="/static/images/faboutus-female.png" class="card-img-top img-fluid h-50 w-25" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title pb-4">Chaitra Natekar</h5>
+
+                        <p class="card-text pb-3">Full Stack Developer</p>
+
+                        <a href="https://github.com/amol1629" target="_blank"><img src="/static/images/icon_github.svg"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Github" alt="">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/amol-rathod-44b4aa230" target="_blank"><img
+                                src="/static/images/icon_linkedin.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="LinkedIn" alt="">
+                        </a>
+
+                        <a href="https://t.me/amolrathod1629" target="_blank"><img
+                                src="/static/images/icon_telegram.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Telegram" alt="">
+                        </a>
+
+                        <a href="https://wa.me/919657383030" target="_blank"><img src="/static/images/icon_whatsapp.svg"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCg2wirjt_6NTxUUTUiiCYkQ" target="_blank"><img
+                                src="/static/images/icon_youtube.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Youtube" alt="">
+                        </a>
+
+                        <a href="mailto:mail@amol1629rathod@gmail.com" target="_blank"><img
+                                src="/static/images/icon_gmail.svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Gmail" alt="">
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
 
 
     {{!-- Footer --}}
@@ -120,8 +185,9 @@
                 </div>
                 <div class="col-12 col-md-4 text-center">
                     <h5 class="text-info">About Us</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere
-                        et sit amet ligula.</p>
+                    <p>By understanding the need of students, we have developed <span
+                            class="text-warning fw-bolder">"Coding Cosmos"</span> so that money can not became the
+                        barrier in Learning..</p>
                 </div>
                 <div class="col-12 col-md-4 text-center">
                     <h5 class="text-info">Follow Us</h5>
