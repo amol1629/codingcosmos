@@ -18,6 +18,8 @@
             background-attachment: fixed;
         }
 
+
+
         h2 {
             color: white;
             text-shadow: 0 0 5px deeppink,
@@ -44,84 +46,64 @@
         }
     </style>
 
-    <title>Sign In Page</title>
+    <title>About Us</title>
 </head>
 
 <body>
 
-    {{!-- {{> navbar data=details}} --}}
-
-    {{!-- Navigation bar --}}
 
     {{> signinupNav sign=signinup}}
 
 
 
-    {{!-- Sign in form --}}
-    <section class="about-us-section py-5 my-5 ">
-        <div class="container">
-            <div class="row">
+    <section class="about-us-offers">
+        <div class="container-fluid container-fluid py-3 px-5 border border-bottom-5">
+            <div class="row my-5">
 
-                <div class="col-md-6 align-self-center text-center">
-                    <h1 class="text-white">Climb Your Way To Success With CODING COSMOS</h1>
+                <div class="w-75 align-self-center m-auto">
+                    <h2 class="text-center text-info fs-1 pb-5">What CodingCosmos Can Offer You</h2>
+
+                    <p class="text-center text-white fs-5 pb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem earum unde vero fugit
+                        voluptatum nihil sapiente voluptates eos sit est aperiam enim in magni, ullam tempora iusto
+                        incidunt
+                        eveniet.
+                    </p>
                 </div>
 
-                <div class="col-md-6 align-self-center">
-                    <div class="container-fluid my-5 ">
-                        <div class="my-5 py-5  text-white align-self-center w-100 align-self-center">
-                            <div class="row justify-content-center">
-                                <div class="col ">
+                <h2 class="text-center text-info fs-1 pb-5 my-5 ">What CodingCosmos Can Offer You</h2>
 
-                                    <h2 class="text-center">Sign In Here</h2>
-                                    <form action="/signin" method="post">
-                                        <div class="form-group my-4">
-                                            <label for="email">Email address</label>
-                                            <input type="email" class="form-control py-2 mt-2" id="email" name="email"
-                                                placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group my-4">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control py-2 mt-2" id="password"
-                                                name="password" placeholder="Enter password">
-                                        </div>
 
-                                        <div class="text-center py-3">
-                                            <button type="submit" id="checkout-button"
-                                                class="btn text-white text-center submit-button px-5">Log
-                                                In</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-6 my-3 text-center py-4 au-card-success">
+                    <img src="/static/images/about-us-card-1.png" class="card-img-top img-fluid h-50 w-25" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title pb-4">Roadmap to Success</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.
+                        </p>
                     </div>
                 </div>
 
-
-            </div>
-        </div>
-    </section>
-
-
-
-    {{!-- Information Section --}}
-    <section class="about-us-section py-5 my-5 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <h1 class="text-white">We Are Here To Make Your Journey Evident.</h1>
-                </div>
-
-                <div class="col-md-6 align-self-center">
-                    <img src="/static/images/aboutus-1.png" alt="" class="img-fluid">
+                <div class="col-md-6 my-3 text-center py-4 au-card-practical">
+                    <img src="/static/images/about-us-card-2.png" class="card-img-top img-fluid h-50 w-25" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title pb-4">Practical Knowledge</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
 
 
 
+    {{!-- Footer --}}
 
     <footer class=" py-3 mt-5 footer singup-page-footer">
         <div class="container ">
@@ -155,7 +137,6 @@
             </div>
         </div>
     </footer>
-
 
 
 
