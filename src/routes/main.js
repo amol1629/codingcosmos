@@ -15,10 +15,8 @@ const bcrypt = require('bcryptjs');
 // For sending email notifications
 const nodemailer = require('nodemailer')
 
-// For sending messages notifications : 
-// const accountSid = "AC95c05e211f2b4e3a8b4b5be9b9e930a4";
-// const authToken = "137c8209b6ca54f2f98b671d0de48e1e";
-// const client = require("twilio")(accountSid, authToken);
+// For sending messages notifications:
+
 
 
 routes.get("/home", async (request, response) => {
@@ -81,6 +79,8 @@ routes.get("/about", async (request, response) => {
 routes.get("/signout", async (request, response) => {
     const details = await Detail.findOne({ "_id": "63beceb22dd9b9698740163e" });
 
+    console.log("You have closed the application..");
+
     response.render("/", {
         details: details
     });
@@ -89,9 +89,11 @@ routes.get("/signout", async (request, response) => {
 
 routes.get("/profile", async (request, response) => {
     const details = await Detail.findOne({ "_id": "63beceb22dd9b9698740163e" });
+    const signups = await Signup.findOne();
 
     response.render("profile", {
-        details: details
+        details: details,
+        signups: signups
     });
 })
 
@@ -155,17 +157,20 @@ routes.post("/user-contact-form", async (req, res) => {
             from: 'amol1629rathod@gmail.com',
             to: sendMailTo,
             subject: 'Feedback Received',
-            text: `
+            html: `
             Hi ${receiverName},
 
             We appreciate you taking the time to give us feedback. Your feedback helps us continue to make our products even better. Your response is invaluable to us, and we wanted to let you know how important your thoughts are to the team at "Coding Cosmos".
             
             If you ever have any questions or want to share more, feel free to contact us at amol1629rathod@gmail.com. We’re always happy to hear from you!‍
 
+            
+
             Thank you for your time and your valuable feedback!
 
             Regards,
-            The Coding Cosmos team`,
+            The Coding Cosmos team,
+            Amol Rathod`,
 
 
         };
@@ -196,8 +201,6 @@ routes.post("/logup", async (req, res) => {
         const uemail = req.body.email;
         const phone = req.body.phoneNumber;
 
-        console.log(phone);
-
         const newUser = new Signup({
             name: req.body.name,
             email: req.body.email,
@@ -212,16 +215,16 @@ routes.post("/logup", async (req, res) => {
 
         // Seding registration confirmation on mobile number :
 
-        /*  const accountSid = "AC95c05e211f2b4e3a8b4b5be9b9e930a4";
-         const authToken = "137c8209b6ca54f2f98b671d0de48e1e";
-         const client = require("twilio")(accountSid, authToken);
- 
-         client.messages
-             .create({
-                 body: "Hello from Twilio", from: "+15109837566",
-                 to: `+91${phone}`
-             })
-             .then(message => console.log(message.sid)); */
+        /* const accountSid = "AC95c05e211f2b4e3a8b4b5be9b9e930a4";
+        const authToken = "137c8209b6ca54f2f98b671d0de48e1e";
+        const client = require("twilio")(accountSid, authToken);
+
+        client.messages
+            .create({
+                body: "Hello from Twilio", from: "+15109837566",
+                to: `+919657383030`
+            })
+            .then(message => console.log(message.sid)); */
 
 
         // Sending email confirmation : 
@@ -240,16 +243,24 @@ routes.post("/logup", async (req, res) => {
             from: 'amol1629rathod@gmail.com',
             to: sendMailTo,
             subject: 'Thank you for completing registration',
-            text: `
-                Dear ${receiverName},
+            html: `
+                <h2>Dear ${receiverName},</h2>
                 
-                Thank you for completing your registration with Coding Cosmos.
+                <p>Thank you for completing your registration.</p>
                 
-                This email serves as a confirmation that your account is activated and that you are officially a part of the Coding Cosmos family.
-                Enjoy!
+                <p> This email serves as a confirmation that your account is activated and that you are officially a part of the Coding Cosmos family.
+                </p>
+
+                <p>Enjoy!</p>
+
+                <div class="mb-3 text-center">
+                        <a href="https://codingcosmos.cyclic.app/signin">Click here to Login</a>
+                </div>
                 
-                Regards,
-                The Coding Cosmos team`,
+                <p>Regards,</p>
+                <p>The Coding Cosmos team,</p>
+                <p>Amol Rathod</p>
+                `,
 
 
         };
@@ -291,7 +302,7 @@ routes.post("/signin", async (req, res) => {
         if (passMatching) {
             console.log("\nWelcome back,", userEmail.name);
 
-
+            console.log(new Date());
 
             res.redirect('/home')
 

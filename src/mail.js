@@ -32,17 +32,17 @@
 
 
 // Twilio API :
+// const accountSid = 'AC95c05e211f2b4e3a8b4b5be9b9e930a4';
+// const authToken = '0c369c479bd27e6f2eb9f8299be6563a';
+// const client = require('twilio')(accountSid, authToken);
 
-// const accountSid = "AC95c05e211f2b4e3a8b4b5be9b9e930a4";
-// const authToken = "137c8209b6ca54f2f98b671d0de48e1e";
-// const client = require("twilio")(accountSid, authToken);
-
-// client.messages.create({
-//     body: "Hello from Twilio",
-//     from: "+15109837566",
-//     to: "+919657383030"
-// }).then(message => console.log(message.sid));
-
+// client.messages
+//     .create({
+//         body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+//         from: '+15109837566',
+//         to: '+919657383030'
+//     })
+//     .then(message => console.log(message.sid));
 
 // Vonage Server to send messages :
 
